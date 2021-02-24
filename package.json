@@ -1,11 +1,13 @@
 {
   "name": "@rlemiengre/async-read-multiple-json",
-  "version": "0.1.1",
+  "version": "1.1.0",
   "description": "Asynchronously read the contents of one or more JSON files into a promise-wrapped array.",
   "keywords": [
     "json",
     "JSON",
     "read",
+    "file",
+    "files",
     "list",
     "array",
     "async",
@@ -25,5 +27,13 @@
     "mocha": "^8.3.0",
     "rewire": "^5.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rlemiengre/async-read-multiple-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rlemiengre/async-read-multiple-json/issues"
+  },
+  "homepage": "https://github.com/rlemiengre/async-read-multiple-json#readme"
 }
