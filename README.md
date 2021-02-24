@@ -2,12 +2,12 @@
 
 ## Version
 
-0.1.0
+0.1.1
 
 ## Description
 
 Asynchronously read the contents of one or more JSON files into a promise-wrapped array,
-in order to process the files only after they are all read and parsed correctly.
+in order to process the contents of the files only after they are all read and parsed correctly.
 
 ## Usage
 
@@ -62,13 +62,15 @@ const jsonFiles = [
 	'file3.json'
 ];   
 
-asyncReadMultipleJSON(jsonFiles).then(responses => { 
-   console.log(responses);
-})
-.catch(err => {
-    console.log(err.message);
-});
-
+asyncReadMultipleJSON(jsonFiles)
+    .then(responses => { 
+        for (let i=0; i<responses.length; i++) {
+            console.log(responses[i]);
+        }
+    })
+    .catch(err => {
+        console.log(err.message);
+    });
 ```
 
 **running the code**:
@@ -77,8 +79,7 @@ asyncReadMultipleJSON(jsonFiles).then(responses => {
 ```
 
 ```js
-[
-  {
+{
     "id": 1,
     "name": "name1",
     "content": [
@@ -86,8 +87,9 @@ asyncReadMultipleJSON(jsonFiles).then(responses => {
       "item2"
     ],
     "visited": 11
-  },
-  {
+}
+
+{
     "id": 2,
     "name": "name2",
     "content": [
@@ -95,8 +97,9 @@ asyncReadMultipleJSON(jsonFiles).then(responses => {
       "item2"
     ],
     "visited": 8
-  },
-  {
+}
+
+{
     "id": 3,
     "name": "name3",
     "content": [
@@ -104,8 +107,7 @@ asyncReadMultipleJSON(jsonFiles).then(responses => {
       "item2"
     ],
     "visited": 0
-  }
-]
+}
 ```
 
 ## Installation
@@ -127,6 +129,10 @@ asyncReadMultipleJSON(fileList);
 fileList
 
 An array of one or more JSON files to be read.
+
+**return value**:
+
+The function returns a promise (which resolves with an array of objects representing the contents of the provided JSON files).
 
 ## Errors
 

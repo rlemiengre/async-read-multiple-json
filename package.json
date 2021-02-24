@@ -1,7 +1,7 @@
 {
   "name": "@rlemiengre/async-read-multiple-json",
-  "version": "0.1.0",
-  "description": "Asynchronously read the contents of one or more JSON files into a promise-wrapped array, in order to process the files only after they are all read and parsed correctly.",
+  "version": "0.1.1",
+  "description": "Asynchronously read the contents of one or more JSON files into a promise-wrapped array.",
   "keywords": [
     "json",
     "JSON",
