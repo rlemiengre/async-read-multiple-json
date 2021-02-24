@@ -1,0 +1,29 @@
+{
+  "name": "@rlemiengre/async-read-multiple-json",
+  "version": "0.1.0",
+  "description": "Asynchronously read the contents of one or more JSON files into a promise-wrapped array, in order to process the files only after they are all read and parsed correctly.",
+  "keywords": [
+    "json",
+    "JSON",
+    "read",
+    "list",
+    "array",
+    "async",
+    "asynchronous",
+    "asynchronously",
+    "fetch",
+    "promise"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha index.test.js"
+  },
+  "author": "Ruben L",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.3.0",
+    "rewire": "^5.0.0"
+  },
+  "dependencies": {}
+}
